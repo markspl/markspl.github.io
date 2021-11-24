@@ -1,24 +1,11 @@
-# project
+![Image](images/frontpage.png)
 
-## Project setup
-```
-npm install
-```
+###### *Simple portfolio created with [Vue](https://vuejs.org/) + [Bootstrap](https://getbootstrap.com/).*
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+https://markspl.github.io
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+#### How-to
+- Install `npm install`
+- Compile for dev `npm run serve`
+- Compile for prod `npm run build`
+- Lintting files `npm run lint`
