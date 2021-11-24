@@ -4,5 +4,7 @@
  * @type {import('@vue/cli-service').ProjectOptions}
  */
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production' ? 'markspl.github.io/' : '',
+  // Would use "/" as publicPath on GitHub pages, for dev'ing nothing.
+  // Default NODE_ENV is "production".
+  publicPath: process.env.NODE_ENV === 'production' ? '/' : '',
 };
