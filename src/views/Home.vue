@@ -4,6 +4,8 @@
       <h1>markspl</h1>
       <h5>markus palomäki</h5>
 
+      <repositories />
+      <hr>
       <socials :data="links"/>
     </div>
   </div>
@@ -12,11 +14,13 @@
 <script>
 // @ is an alias to /src
 import Socials from '@/components/Socials.vue';
+import Repositories from '@/components/Repositories.vue';
 
 export default {
   name: 'SocialsLinks',
   components: {
     Socials,
+    Repositories,
   },
   data() {
     return {
