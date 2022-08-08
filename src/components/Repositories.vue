@@ -9,23 +9,23 @@
           </div>
         </div>
         <div class="col-lg col-md-12" v-for="item in repos" :key="item.id">
-            <div class="card h-100">
-              <div class="card-body">
-                <h4 style="word-break: break-word;" class="card-title">{{ item.name }}</h4>
-                <!-- eslint-disable max-len -->
-                <h6 class="card-subtitle">Last push: {{ new Date(item.pushed_at).toLocaleDateString('fi-FI') }}</h6>
-                <hr>
-                <p class="card-text">{{ item.description }}</p>
-                <a :href="item.html_url" target="_blank" class="stretched-link"></a>
-              </div>
-              <template v-if="item.topics.length">
-                <div class="card-footer">
-                  <span class="badge rounded-pill" v-for="topic in item.topics" :key="topic">
-                    {{ topic }}
-                  </span>
-                </div>
-              </template>
+          <div class="card h-100">
+            <div class="card-body">
+              <h4 style="word-break: break-word;" class="card-title">{{ item.name }}</h4>
+              <!-- eslint-disable max-len -->
+              <h6 class="card-subtitle">Last push: {{ new Date(item.pushed_at).toLocaleDateString('fi-FI') }}</h6>
+              <hr>
+              <p class="card-text">{{ item.description }}</p>
+              <a :href="item.html_url" target="_blank" class="stretched-link"></a>
             </div>
+            <template v-if="item.topics.length">
+              <div class="card-footer">
+                <span class="badge rounded-pill" v-for="topic in item.topics" :key="topic">
+                  {{ topic }}
+                </span>
+              </div>
+            </template>
+          </div>
         </div>
       </div>
     </div>
@@ -82,7 +82,7 @@ export default {
   margin-bottom: 5px;
 }
 
-.repositories{
+.repositories {
   margin-top: 2em;
 }
 
@@ -108,18 +108,23 @@ div.repositories div.card-footer>span {
     0px 20px 30px rgba(0, 0, 0, 0.05);
 }
 
-.badge{
+.badge {
   background: #000;
   color: #fff;
 }
 
-.timestamp{
+.timestamp {
   text-align: right;
   font-size: xx-small;
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 </style>
