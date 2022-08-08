@@ -1,6 +1,11 @@
 <template>
   <div class="socials">
-    <div class="row">
+    <div class="row" v-if="!data.length">
+      <div class="col">
+        <p>Loading...</p>
+      </div>
+    </div>
+    <div class="row" v-if="data.length">
       <div class="col" v-for="item in data" :key="item.id">
         <div class="media">
           <!-- eslint-disable max-len -->

@@ -54,6 +54,10 @@ export default {
 
 .home {
   font-family: "Roboto Mono", monospace;
+
+  animation: fadeIn ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 a[id="4"] {
@@ -84,6 +88,11 @@ h1:after{
   width:0;
   display: inline-block;
   animation: blink 1s linear infinite alternate;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 @keyframes blink{
