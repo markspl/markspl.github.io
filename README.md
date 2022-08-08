@@ -1,6 +1,6 @@
 ![Image](images/screenshot.png)
 
-[![Deploy workflow](https://github.com/markspl/markspl.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/markspl/markspl.github.io/actions) 
+[![Deploy workflow](https://github.com/markspl/markspl.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/markspl/markspl.github.io/actions/workflows/deploy.yml) 
 ![Vue version](https://img.shields.io/github/package-json/dependency-version/markspl/markspl.github.io/vue?logo=vue)
 ![React Bootstrap version](https://img.shields.io/github/package-json/dependency-version/markspl/markspl.github.io/bootstrap?logo=bootstrap) 
 
