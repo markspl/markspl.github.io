@@ -15,18 +15,15 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "18"
+
       # Install and build
       - run: |
           npm ci
           npm run build
       
-      - name: Init repo and commit generated files
-
-      # Copy README.md
-      - run: cp ./README.md ./dist/README.md
-
       # Init and commit
-      - run: |
+      - name: Init repo and commit generated files
+        run: |
           set -e
           cd dist
           git add -A
@@ -42,3 +39,4 @@ jobs:
           branch: gh-pages
           force: true
           directory: ./dist
+          
