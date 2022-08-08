@@ -8,7 +8,7 @@
               <div class="card-body">
                 <h4 class="card-title">{{ item.name }}</h4>
                 <!-- eslint-disable max-len -->
-                <h6 class="card-subtitle">Updated: {{ new Date(item.updated_at).toLocaleDateString('fi-FI') }}</h6>
+                <h6 class="card-subtitle">Last push: {{ new Date(item.pushed_at).toLocaleDateString('fi-FI') }}</h6>
                 <hr>
                 <p class="card-text">{{ item.description }}</p>
                 <a :href="item.html_url" target="_blank" class="stretched-link"></a>
@@ -31,11 +31,11 @@
 import axios from 'axios';
 
 const sortByUpdated = (arr) => {
-  // Sort by comparing element.updated_at
+  // Sort by comparing element.pushed_at
   function sorter() {
     function sort(a, b) {
-      if (a.updated_at < b.updated_at) return 1;
-      if (a.updated_at > b.updated_at) return -1;
+      if (a.pushed_at < b.pushed_at) return 1;
+      if (a.pushed_at > b.pushed_at) return -1;
       return 0;
     }
     return sort;
@@ -100,5 +100,10 @@ div.repositories div.card-footer>span {
 .badge{
   background: #000;
   color: #fff;
+}
+
+.timestamp{
+  text-align: right;
+  font-size: xx-small;
 }
 </style>
