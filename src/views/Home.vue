@@ -1,9 +1,8 @@
 <template>
   <div class="home">
-    <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
+    <div class="d-flex flex-column align-items-center">
       <h1>markspl</h1>
       <h5>markus palomäki</h5>
-
       <repositories />
       <hr>
       <socials :data="links"/>

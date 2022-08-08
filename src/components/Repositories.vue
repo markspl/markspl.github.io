@@ -2,7 +2,7 @@
   <div class="repositories">
     <div class="container">
       <div class="row justify-content-center">
-        <h2>Recently updated repositories</h2>
+        <h3>Recently updated repositories</h3>
         <div class="col-lg col-md-12" v-for="item in repos" :key="item.id">
             <div class="card h-100">
               <div class="card-body">
@@ -75,6 +75,10 @@ export default {
 <style>
 [class*="col-"] {
   margin-bottom: 5px;
+}
+
+.repositories{
+  margin-top: 2em;
 }
 
 div.repositories div.card-footer>span {
