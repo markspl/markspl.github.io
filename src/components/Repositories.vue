@@ -1,12 +1,17 @@
 <template>
   <div class="repositories">
     <div class="container">
-      <div class="row justify-content-center">
-        <h3>Recently updated repositories</h3>
+      <div class="row justify-content-center fade">
+        <h3 v-if="repos.length">Recently updated repositories</h3>
+        <div class="d-flex justify-content-center" v-if="!repos.length">
+          <div class="spinner-border" role="status">
+            <span class="sr-only"></span>
+          </div>
+        </div>
         <div class="col-lg col-md-12" v-for="item in repos" :key="item.id">
             <div class="card h-100">
               <div class="card-body">
-                <h4 class="card-title">{{ item.name }}</h4>
+                <h4 style="word-break: break-word;" class="card-title">{{ item.name }}</h4>
                 <!-- eslint-disable max-len -->
                 <h6 class="card-subtitle">Last push: {{ new Date(item.pushed_at).toLocaleDateString('fi-FI') }}</h6>
                 <hr>
@@ -85,8 +90,14 @@ div.repositories div.card-footer>span {
   margin-right: 0.2em;
 }
 
-.card {
+.fade {
   transition: .2s;
+  animation: fadeIn ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.card {
   cursor: pointer;
 }
 
@@ -105,5 +116,10 @@ div.repositories div.card-footer>span {
 .timestamp{
   text-align: right;
   font-size: xx-small;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 </style>

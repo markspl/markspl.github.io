@@ -1,11 +1,11 @@
 <template>
   <div class="home">
     <div class="d-flex flex-column align-items-center">
-      <h1>markspl</h1>
-      <h5>markus palomäki</h5>
+      <h1 class="fade">markspl</h1>
+      <h5 class="fade">markus palomäki</h5>
       <repositories />
       <hr>
-      <socials :data="links"/>
+      <socials class="fade" :data="links"/>
     </div>
   </div>
 </template>
@@ -57,10 +57,6 @@ export default {
 
 .home {
   font-family: "Roboto Mono", monospace;
-
-  animation: fadeIn ease 2s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
 }
 
 a[id="4"] {
@@ -91,6 +87,12 @@ h1:after{
   width:0;
   display: inline-block;
   animation: blink 1s linear infinite alternate;
+}
+
+.fade{
+  animation: fadeIn ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 @keyframes fadeIn {
