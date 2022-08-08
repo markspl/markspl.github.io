@@ -1,0 +1,44 @@
+name: Build and Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Setup and Build Application
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build Vue application
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+      # Install and build
+      - run: |
+          npm ci
+          npm run build
+      
+      - name: Init repo and commit generated files
+
+      # Copy README.md
+      - run: cp ./README.md ./dist/README.md
+
+      # Init and commit
+      - run: |
+          set -e
+          cd dist
+          git add -A
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "deploy"
+      
+      # Force pushing new app
+      - name: Push to gh-pages
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          force: true
+          directory: ./dist
