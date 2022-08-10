@@ -4,50 +4,18 @@
       <h1 class="fade">markspl</h1>
       <h5 class="fade">markus palomäki</h5>
       <repositories />
-      <hr>
-      <socials class="fade" :data="links"/>
     </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Socials from '@/components/Socials.vue';
 import Repositories from '@/components/Repositories.vue';
 
 export default {
   name: 'SocialsLinks',
   components: {
-    Socials,
     Repositories,
-  },
-  data() {
-    return {
-      links: [
-        {
-          id: 1,
-          howerText: 'markspl',
-          icon: 'fab fa-github',
-          href: 'https://github.com/markspl/',
-        },
-        {
-          id: 2,
-          howerText: '@markuspalomaki',
-          icon: 'fab fa-twitter',
-          href: 'https://twitter.com/markuspalomaki',
-        },
-        {
-          id: 3,
-          howerText: 'in/markuspalomaki',
-          icon: 'fab fa-linkedin',
-          href: 'https://www.linkedin.com/in/markuspalomaki/',
-        },
-        {
-          id: 4,
-          howerText: 'Just kidding! 😉',
-        },
-      ],
-    };
   },
 };
 </script>
