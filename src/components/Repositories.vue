@@ -90,13 +90,6 @@ div.repositories div.card-footer>span {
   margin-right: 0.2em;
 }
 
-.fade {
-  transition: .2s;
-  animation: fadeIn ease 2s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
 .card {
   cursor: pointer;
 }
@@ -116,15 +109,5 @@ div.repositories div.card-footer>span {
 .timestamp {
   text-align: right;
   font-size: xx-small;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
 }
 </style>

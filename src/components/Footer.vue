@@ -2,7 +2,7 @@
   <footer>
     <hr>
     <div class="container">
-      <socials class="fade" :data="links" />
+      <socials :data="links" />
       <p>
         Check my nasty code from [<a href="https://github.com/markspl/markspl.github.io">here</a>]
         - Done with <a href="https://vuejs.org/" class="fab fa-vuejs" />
