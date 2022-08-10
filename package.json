@@ -6,8 +6,7 @@
     "serve": "NODE_OPTIONS=--openssl-legacy-provider vue-cli-service serve",
     "devBuild": "cross-env NODE_ENV=dev NODE_OPTIONS=--openssl-legacy-provider vue-cli-service build",
     "build": "NODE_OPTIONS=--openssl-legacy-provider vue-cli-service build",
-    "lint": "NODE_OPTIONS=--openssl-legacy-provider vue-cli-service lint",
-    "deploy": "sh deploy.sh"
+    "lint": "NODE_OPTIONS=--openssl-legacy-provider vue-cli-service lint"
   },
   "dependencies": {
     "axios": "^0.27.2",
